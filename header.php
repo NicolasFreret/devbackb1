@@ -24,8 +24,8 @@
             Contact
         </a>
 
-        <a href="login.php">
-            Connexion
+        <a href="<?= isset($_COOKIE['user']) ? 'controllers/logout.php' : 'login.php' ?>">
+            <?= isset($_COOKIE['user']) ? 'Déconnexion' : 'Connexion' ?>
         </a>
   </header> 
   <main>

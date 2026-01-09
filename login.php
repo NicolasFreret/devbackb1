@@ -1,4 +1,8 @@
 <?php
+    if(isset($_COOKIE['user'])){
+        header('Location: http://127.0.0.1/php/');
+        exit;
+    }
     include('header.php');
     
     
