@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700|DM+Serif+Display&display=swap">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="logo__nav">
+				<div class="logo">
+					<a href="index.html">
+						Obélix
+					</a>
+				</div>
+				<nav>
+					<ul>
+						<li>
+							<a href="#">Je code</a>
+							<ul class="sub_menu">
+								<li class="title">
+									Challende de code
+								</li>
+								<li>
+									<a href="#">Tous les défis</a>
+								</li>
+								<li>
+									<a href="#">C'est quoi un défi ?</a>
+								</li>
+								<li>
+									<a href="#">Comment créer un défi ?</a>
+								</li>
+								<li class="title">
+									Par difficulté
+								</li>
+								<li>
+									<a href="#">Easy</a>
+								</li>
+								<li>
+									<a href="#">Ca va</a>
+								</li>
+								<li>
+									<a href="#">Aïe</a>
+								</li>
+								<li>
+									<a href="#">Ca pique sa mère</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">J'apprends</a>
+							<ul class="sub_menu">
+								<li class="title">
+									Actualités
+								</li>
+								<li>
+									<a href="#">Tous nos nouveautés</a>
+								</li>
+								<li>
+									<a href="#">Veille</a>
+								</li>
+								<li class="title">
+									Solutions des défis
+								</li>
+								<li>
+									<a href="#">Toutes nos solutions</a>
+								</li>
+								<li>
+									<a href="#">Proposer une solution</a>
+								</li>
+								<li class="title">
+									Partenaires
+								</li>
+								<li>
+									<a href="#">Toutes les formations</a>
+								</li>
+								<li class="title">
+									Carrières et orientations
+								</li>
+								<li>
+									<a href="#">Tous nos conseils</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Pour les pros</a>
+							<ul class="sub_menu">
+								<li class="title">
+									Obélix pour les pros
+								</li>
+								<li>
+									<a href="#">Ecoles</a>
+								</li>
+								<li>
+									<a href="#">Formations</a>
+								</li>
+								<li>
+									<a href="#">Entreprises</a>
+								</li>
+							</ul>
+						</li>
+					</ul>	
+				</nav>
+			</div>	
+			<div class="search_account">
+				<a href="#" class="search"><span class="icon-magnifier"></span></a>
+				<a href="profil.html" class="btn"><span class="icon-user"></span> Mon compte</a>
+			</div>
+			<a href="#" id="hbg">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+		</div>			
+	</header>
+	<main>
+		<section id="hero">
+			<div class="container">
+				<h1 class="h1">
+					Challenges
+				</h1>
+				<p class="strong">Les challenges de code te permettent de mettre à l'épreuve tes compétences en programmation.</p>
+			</div>
+		</section>
+		<div class="triangle"></div>
+
+		<section id="challenges">
+			<div class="container title">
+				<div class="filters">
+					<a href="#" data-filter="card" class="active btn">
+						Tous
+					</a>
+					<a href="#" data-filter="starter" class="btn starter">
+						Starter
+					</a>
+					<a href="#" data-filter="debutant" class="btn debutant">
+						Débutant
+					</a>
+					<a href="#" data-filter="intermediaire" class="btn intermediaire">
+						Intermédiaire
+					</a>
+					<a href="#" data-filter="avance" class="btn avance">
+						Avancé
+					</a>
+				</div>			
+				<div class="grid col-3">
+					
+					<article class="card">
+						<div class="level avance">
+							<span>Avancé</span>
+						</div>
+						<figure>
+							<img src="https://wp.tainix.fr/wp-content/uploads/2024/06/REQUIN_TRIATHLON_TAINIX-scaled.jpg" alt="">
+						</figure>
+						<div class="content">
+							<h1 class="h3 line-clamp clamp-2">
+								Un requin pendant le triathlon
+							</h1>
+							<p class="line-clamp clamp-3">
+								Des athlètes dans un fleuve pour épreuve sportive, et un requin qui a très faim ...
+							</p>
+							<a href="#" class="btn blue">
+								<span class="icon-code small"></span> Je code
+							</a>
+						</div>
+					</article>
+					<article class="card">
+						<div class="level avance">
+							<span>Avancé</span>
+						</div>
+						<figure>
+							<img src="https://wp.tainix.fr/wp-content/uploads/2024/06/REQUIN_TRIATHLON_TAINIX-scaled.jpg" alt="">
+						</figure>
+						<div class="content">
+							<h1 class="h3 line-clamp clamp-2">
+								Un requin pendant le triathlon
+							</h1>
+							<p class="line-clamp clamp-3">
+								Des athlètes dans un fleuve pour épreuve sportive, et un requin qui a très faim ...
+							</p>
+							<a href="#" class="btn blue">
+								<span class="icon-code small"></span> Je code
+							</a>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="container newsletter">
+			<div class="content">
+				<h2 class="h2">Ta newsletter <span>chaque mois</span></h2>
+				<p>Corrigés, challenges, actualités, veille technique... aucun spam.</p>
+			</div>
+			<div class="form">
+				<form action="POST">
+					<input type="text" placeholder="Ton meulleur @">
+				</form>
+			</div>
+		</div>
+		<nav class="container">
+			<div class="logo">
+				<p>Tainix pour les Pros</p>
+				<a href="#">Challenge de code ?</a>
+			</div>
+			<div class="devs">
+				<p>Tainix pour les devs</p>
+				<a href="#">Challenge de code ?</a>
+				<a href="#">Les derniers challenges</a>
+				<a href="#">Coder un challenge</a>
+				<a href="#">Les corriges ?</a>
+				<a href="#">PHP</a>
+				<a href="#">JavaScript</a>
+				<a href="#">Python</a>
+				<a href="#">Web dev</a>
+
+			</div>
+			<div class="pros">
+				<p>Tainix pour les Pros</p>
+				<a href="#">Challenge de code ?</a>
+				<a href="#">Les derniers challenges</a>
+				<a href="#">Coder un challenge</a>
+				<a href="#">Les corriges ?</a>
+
+			</div>
+			<div class="about">
+				<p>A propos</p>
+				<a href="manifeste.html">Manifeste</a>
+				<a href="#">A propos</a>
+				<a href="#">Nous suivre</a>
+				<a href="contact.html">Contact</a>
+			</div>
+		</nav>
+		<div class="legal_social container">
+			<div class="legal">
+				<a href=""> © 2024 Tainix</a> <a href="">Contact</a> <a href="">Mentions légales</a> <a href="">Politique de confidentialité</a>
+			</div>
+			<div class="social">
+				<a href="" aria-label="github">
+					<span class="icon-github"></span>
+				</a>
+				<a href="" aria-label="Linkedin">
+					<span class="icon-linkedin"></span> 
+				</a>
+				<a href="" aria-label="Youtube">
+					<span class="icon-yt"></span> 
+				</a>
+			</div>
+		</div>
+	</footer>
+	<script async type="module">
+		import * as main from './assets/js/main.js'
+		main.default()
+		main.wordsTyping('#hero h1 span',['progresser',`t'amuser`,'te former','te détendre','te challenger'],80)
+		main.filter('.filters .btn', '.grid .card')
+
+
+	</script>
+</body>
+</html>
