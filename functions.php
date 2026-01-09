@@ -1,5 +1,7 @@
 <?php
 
+require 'src/Users.php';
+
 /**
  * Va chercher la configuration du site
  * @param $key [?string] propriété à aller chercher DEFAULT null
@@ -27,8 +29,16 @@ function homeUrl(): string{
  * @return void affiche le HTML demandé
  */
 function getPage(string $pageName):void{
-    $path = getConfig('components_folder');
-    if(file_exists($path.'header.php')) require $path.'header.php';
+    getComposant('header.php');
     require 'Views/'.$pageName;
-    if(file_exists($path.'footer.php')) require $path.'footer.php';
+    getComposant('footer.php');
+
 }
+
+
+
+function getComposant(string $composantName):void{
+    $path = getConfig('components_folder');
+    if(file_exists($path.$composantName)) require $path.$composantName;
+}
+
