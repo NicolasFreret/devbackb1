@@ -1,4 +1,5 @@
 <?php 
+session_start();
 //echo $_SERVER['HTTP_REFERER'];
 
 ?>
@@ -24,8 +25,8 @@
             Contact
         </a>
 
-        <a href="<?= isset($_COOKIE['user']) ? 'controllers/logout.php' : 'login.php' ?>">
-            <?= isset($_COOKIE['user']) ? 'Déconnexion' : 'Connexion' ?>
+        <a href="<?= isset($_SESSION['user']) ? 'controllers/logout.php' : 'login.php' ?>">
+            <?= isset($_SESSION['user']) ? 'Déconnexion' : 'Connexion' ?>
         </a>
   </header> 
   <main>
