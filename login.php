@@ -1,5 +1,7 @@
 <?php
     include('header.php');
+    
+    
     $msg = "";
     if( isset($_GET['msg']) && $_GET['msg'] == "success" ) $msg = "Tu es bien connecté.e coquin.e";
     if( isset($_GET['msg']) && $_GET['msg'] == "error" ) $msg = "Mince...";
