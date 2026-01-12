@@ -3,7 +3,6 @@
 			<div class="container">
 				<h1 class="h1">
 					Tu codes pour <br>
-					<?= $test ?>
 					<span></span> .
 				</h1>
 				<p class="strong">Notre mission, accompagner les développeurs et développeuses web dans leur <br> progression technique.</p>
@@ -16,27 +15,7 @@
 				<h2 class="h2">Progresse en te mettant à l'épreuve...</h2>
 				<p class="strong-2">Challenge-toi !</p>
 				<div class="grid col-3">
-					<?= getComposant('card-1.php',
-						[
-							'title'=>'coucou',
-							'content' => 'Des athlètes dans un fleuve pour épreuve sportive, et un requin qui a très faim... coucou',
-							'img'=>'https://wp.tainix.fr/wp-content/uploads/2025/10/Bug-out-Shelter-1-1.png'
-						]) 
-					?>
-					<?= getComposant('card-1.php',
-						[
-							'title'=>'coucou 1',
-							'content' => 'Des athlètes dans un fleuve pour épreuve sportive, et un requin qui a très faim...test',
-							'img'=>'https://wp.tainix.fr/wp-content/uploads/2025/10/Bug-out-Shelter-1-2.png'
-						]) 
-					?>
-					<?= getComposant('card-1.php',
-						[
-							'title'=>'coucou 2',
-							'content' => 'Des athlètes dans un fleuve pour épreuve sportive, et un requin qui a très faim... chips',
-							'img'=>'https://wp.tainix.fr/wp-content/uploads/2025/10/Bug-out-Shelter-1-3.png'
-						]) 
-					?>
+					<?= $cards ?>
 				</div>
 				<p>Tu souhaites améliorer tes compétences dans un langage de programmation, l'une des meilleures façons de le faire est de relever nos derniers challenges de programmation pour t'entraîner et progresser.</p>
 				<div class="center">

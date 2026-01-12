@@ -32,7 +32,6 @@ function getPage(string $pageName):void{
 
     if(file_exists(getConfig('controllers_folder').$pageName)) require getConfig('controllers_folder').$pageName;
 
-
     getComposant('header.php');
     require 'Views/'.$pageName;
     getComposant('footer.php');
@@ -54,5 +53,12 @@ function getController(string $pageName):void{
     if(file_exists($path.$pageName)){
        require $path.$pageName;
     }
+}
+
+
+function redirectTo(?string $url = null ):never{
+    $home = homeUrl();
+    header('location: '.($url ?  $home.$url : $home) );
+    exit;
 }
 

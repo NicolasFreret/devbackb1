@@ -41,7 +41,7 @@
 				<a href="manifeste.html">Manifeste</a>
 				<a href="#">A propos</a>
 				<a href="#">Nous suivre</a>
-				<a href="contact.html">Contact</a>
+				<a href="<?= homeUrl() ?>contactez-moi/">Contact</a>
 			</div>
 		</nav>
 		<div class="legal_social container">
