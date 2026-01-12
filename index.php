@@ -2,8 +2,6 @@
   session_start();
   require 'Models/crud.php';
   require 'functions.php';
-	$User = new User();
-	echo $User->is_user_logged_in();
 	
 
     $baseFolder = getConfig('base_folder');

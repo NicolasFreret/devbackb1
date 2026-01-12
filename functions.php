@@ -32,9 +32,9 @@ function getPage(string $pageName):void{
 
     if(file_exists(getConfig('controllers_folder').$pageName)) require getConfig('controllers_folder').$pageName;
 
-    getComposant('header.php');
+    getComposant('header.php',['title'=>$title]);
     require 'Views/'.$pageName;
-    getComposant('footer.php');
+    getComposant('footer.php',['title'=>$title]);
 }
 
 
