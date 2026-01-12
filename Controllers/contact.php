@@ -1,4 +1,6 @@
 <?php
 
 
-    $title = "Contact";
+return [
+    'title' => "Contact"
+];

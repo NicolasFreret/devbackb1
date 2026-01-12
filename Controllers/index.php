@@ -1,5 +1,5 @@
 <?php
-    $title = "Accueil";
+    
 
 $challenges = [
 
@@ -33,3 +33,8 @@ foreach ($challenges as $value) {
 }
 
 $cards = ob_get_clean();
+
+return [
+    'cards' => $cards,
+    'title' => "Accueil"
+];

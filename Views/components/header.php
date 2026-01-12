@@ -108,7 +108,9 @@
 			</div>	
 			<div class="search_account">
 				<a href="#" class="search"><span class="icon-magnifier"></span></a>
-				<a href="<?= homeUrl() ?>connexion/" class="btn"><span class="icon-user"></span> Mon compte</a>
+				<a href="<?=  (new User())->is_user_logged_in() ? homeUrl()."mon-profil/" : homeUrl()."connexion/" ?>" class="btn"><span class="icon-user"></span> 
+				<?=  (new User())->is_user_logged_in() ? "Mon compte" : "Connexion" ?>
+			</a>
 			</div>
 			<a href="#" id="hbg">
 				<span></span>

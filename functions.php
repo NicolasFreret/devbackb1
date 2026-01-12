@@ -30,11 +30,12 @@ function homeUrl(): string{
  */
 function getPage(string $pageName):void{
 
-    if(file_exists(getConfig('controllers_folder').$pageName)) require getConfig('controllers_folder').$pageName;
-
-    getComposant('header.php',['title'=>$title]);
-    require 'Views/'.$pageName;
-    getComposant('footer.php',['title'=>$title]);
+    getController($pageName, function($p) use ($pageName){
+         getComposant('header.php', ['title'=>$p['title']]);
+         require 'Views/'.$pageName;
+         getComposant('footer.php', ['title'=>$p['title']]);
+    });
+       
 }
 
 
@@ -48,11 +49,16 @@ function getComposant(string $composantName, array $params = []):void{
 }
 
 
-function getController(string $pageName):void{
+function getController(string $componentName, ?callable $fn = null):void{
     $path = getConfig('controllers_folder');
-    if(file_exists($path.$pageName)){
-       require $path.$pageName;
+    if(file_exists($path.$componentName)){
+        if(!$fn) require $path.$componentName;
+            else{
+                $d = require $path.$componentName;
+                $fn($d);
+            }
     }
+
 }
 
 

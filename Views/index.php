@@ -15,7 +15,7 @@
 				<h2 class="h2">Progresse en te mettant à l'épreuve...</h2>
 				<p class="strong-2">Challenge-toi !</p>
 				<div class="grid col-3">
-					<?= $cards ?>
+					<?= $p['cards'] ?>
 				</div>
 				<p>Tu souhaites améliorer tes compétences dans un langage de programmation, l'une des meilleures façons de le faire est de relever nos derniers challenges de programmation pour t'entraîner et progresser.</p>
 				<div class="center">
