@@ -3,6 +3,7 @@
 			<div class="container">
 				<h1 class="h1">
 					Tu codes pour <br>
+					<?= $test ?>
 					<span></span> .
 				</h1>
 				<p class="strong">Notre mission, accompagner les développeurs et développeuses web dans leur <br> progression technique.</p>
@@ -15,64 +16,27 @@
 				<h2 class="h2">Progresse en te mettant à l'épreuve...</h2>
 				<p class="strong-2">Challenge-toi !</p>
 				<div class="grid col-3">
-					<article class="card">
-						<div class="level intermediaire">
-							<span>Intermédiaire</span>
-						</div>
-						<figure>
-							<img src="https://wp.tainix.fr/wp-content/uploads/2024/06/REQUIN_TRIATHLON_TAINIX-scaled.jpg" alt="">
-						</figure>
-						<div class="content">
-							<h1 class="h3 line-clamp clamp-2">
-								Un requin pendant le triathlon
-							</h1>
-							<p>
-								Des athlètes dans un fleuve pour épreuve sportive, et un requin qui a très faim...
-							</p>
-							<a href="#" class="btn blue">
-								<span class="icon-code small"></span> Je code
-							</a>
-						</div>
-					</article>
-					<article class="card">
-						<div class="level debutant">
-							<span>Débutant</span>
-						</div>
-						<figure>
-							<img src="https://wp.tainix.fr/wp-content/uploads/2024/07/barbara-kosulin-kEphzmaPWfw-unsplash-scaled.jpg" alt="">
-						</figure>
-						<div class="content">
-							<h1 class="h3">
-								L’échelle de Scoville
-							</h1>
-							<p>
-								Des athlètes dans un fleuve pour épreuve sportive, et un requin qui a très faim...
-							</p>
-							<a href="#" class="btn blue">
-								<span class="icon-code small"></span> Je code
-							</a>
-						</div>
-
-					</article>
-					<article class="card">
-						<div class="level avance">
-							<span>Avancé</span>
-						</div>
-						<figure>
-							<img src="https://wp.tainix.fr/wp-content/uploads/2024/06/REQUIN_TRIATHLON_TAINIX-scaled.jpg" alt="">
-						</figure>
-						<div class="content">
-							<h1 class="h3 line-clamp clamp-2">
-								Un requin pendant le triathlon
-							</h1>
-							<p class="line-clamp clamp-3">
-								Des athlètes dans un fleuve pour épreuve sportive, et un requin qui a très faim ...
-							</p>
-							<a href="#" class="btn blue">
-								<span class="icon-code small"></span> Je code
-							</a>
-						</div>
-					</article>
+					<?= getComposant('card-1.php',
+						[
+							'title'=>'coucou',
+							'content' => 'Des athlètes dans un fleuve pour épreuve sportive, et un requin qui a très faim... coucou',
+							'img'=>'https://wp.tainix.fr/wp-content/uploads/2025/10/Bug-out-Shelter-1-1.png'
+						]) 
+					?>
+					<?= getComposant('card-1.php',
+						[
+							'title'=>'coucou 1',
+							'content' => 'Des athlètes dans un fleuve pour épreuve sportive, et un requin qui a très faim...test',
+							'img'=>'https://wp.tainix.fr/wp-content/uploads/2025/10/Bug-out-Shelter-1-2.png'
+						]) 
+					?>
+					<?= getComposant('card-1.php',
+						[
+							'title'=>'coucou 2',
+							'content' => 'Des athlètes dans un fleuve pour épreuve sportive, et un requin qui a très faim... chips',
+							'img'=>'https://wp.tainix.fr/wp-content/uploads/2025/10/Bug-out-Shelter-1-3.png'
+						]) 
+					?>
 				</div>
 				<p>Tu souhaites améliorer tes compétences dans un langage de programmation, l'une des meilleures façons de le faire est de relever nos derniers challenges de programmation pour t'entraîner et progresser.</p>
 				<div class="center">

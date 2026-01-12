@@ -3,29 +3,30 @@
   class User{
 	
 
-	private int $age;
+	
 
 
-	function __construct($age){
-		$this->age = $age;
+	function __construct(){
+		
 	}
 	
-	public function getAge():int{
-		return $this->age;
-	}
-
-	public function setAge(int $newAge):void{
-		$this->age = $newAge;
-	}
 	
-	function loggin(){
-		echo 'coucou';
+	
+	protected function loggin():void{
+		echo 'protected';
 	}
 
-	function logout(){
+	private function logout():void{
+		echo 'private';
 
 	}
 
+
+
+  }
+
+  class Child extends User{
+	
 
 
   }

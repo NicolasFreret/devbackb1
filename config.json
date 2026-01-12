@@ -2,5 +2,7 @@
     "base_url": "http://127.0.0.1",
     "slogan": "Mon super site !",
     "base_folder":"/php",
-    "components_folder":"Views/components/"
+    "components_folder":"Views/components/",
+    "controllers_folder":"Controllers/"
+
 }

@@ -29,16 +29,30 @@ function homeUrl(): string{
  * @return void affiche le HTML demandé
  */
 function getPage(string $pageName):void{
+
+    if(file_exists(getConfig('controllers_folder').$pageName)) require getConfig('controllers_folder').$pageName;
+
+
     getComposant('header.php');
     require 'Views/'.$pageName;
     getComposant('footer.php');
-
 }
 
 
 
-function getComposant(string $composantName):void{
+function getComposant(string $composantName, array $params = []):void{
     $path = getConfig('components_folder');
-    if(file_exists($path.$composantName)) require $path.$composantName;
+    if(file_exists($path.$composantName)){
+        $fields = $params;
+        require $path.$composantName;
+    }
+}
+
+
+function getController(string $pageName):void{
+    $path = getConfig('controllers_folder');
+    if(file_exists($path.$pageName)){
+       require $path.$pageName;
+    }
 }
 
