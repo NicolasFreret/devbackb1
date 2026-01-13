@@ -2,10 +2,13 @@
   session_start();
   require 'Models/crud.php';
   require 'functions.php';
+
+ //https://fakestoreapi.com/users
 	
 
+
     $baseFolder = getConfig('base_folder');
-	switch ($_SERVER['REQUEST_URI']) {
+	switch (explode('?',$_SERVER['REQUEST_URI'])[0]) {
 		case $baseFolder.'/':
 			getPage('index.php');
 			break;
@@ -22,6 +25,14 @@
 			getPage('challenges.php');
 			break;
 
+		case $baseFolder.'/mes-informations/':
+			getPage('infos.php');
+			break;
+		
+		case $baseFolder.'/challenges/detail-challenge/':
+			getPage('challengeDetail.php');
+			break;
+
 		case $baseFolder.'/contactez-moi/':
 			getPage('contact.php');
 			break;
@@ -35,6 +46,7 @@
 			break;
 		
 		default:
+			header("HTTP/2.0 404 Not Found");
 			echo '404';
 			break;
 	}

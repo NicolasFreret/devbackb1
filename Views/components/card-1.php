@@ -5,7 +5,7 @@
 				</span>
 		</div>
 	    <figure>
-			<img src="<?= $fields['img'] ?>" alt="">
+			<img loading="lazy" src="<?= $fields['img'] ?>" alt="">
 		</figure>
 		<div class="content">
 		<h1 class="h3 line-clamp clamp-2">

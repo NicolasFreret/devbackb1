@@ -16,10 +16,9 @@
 			return $user['email'] == $_POST['email'] && $user['password'] == $_POST['password'];
 		});
 
-
 		if(count($res) > 0){
-			$_SESSION['user'] = $res[0];
-			return $res[0];
+			$_SESSION['user'] = $res[array_keys($res)[0]];
+			return $res[array_keys($res)[0]];
 		}
 		return false;
 
