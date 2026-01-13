@@ -26,7 +26,7 @@
 									Challende de code
 								</li>
 								<li>
-									<a href="#">Tous les challenges</a>
+									<a href="<?= homeUrl() ?>challenges/">Tous les challenges</a>
 								</li>
 								<li>
 									<a href="#">C'est quoi un challenge de code ?</a>
@@ -108,9 +108,22 @@
 			</div>	
 			<div class="search_account">
 				<a href="#" class="search"><span class="icon-magnifier"></span></a>
-				<a href="<?=  (new User())->is_user_logged_in() ? homeUrl()."mon-profil/" : homeUrl()."connexion/" ?>" class="btn"><span class="icon-user"></span> 
-				<?=  (new User())->is_user_logged_in() ? "Mon compte" : "Connexion" ?>
-			</a>
+			
+				<?= ifLoggedThenElse(function(){
+					echo '<a href="'.homeUrl().'mon-profil/" class="btn">
+								<span class="icon-user"></span> 
+								Mon Compte
+						</a>
+						<a href="'.homeUrl().'logout/" class="btn">
+								Déconnexion
+						</a>';
+				}, function(){
+						echo '<a href="'.homeUrl().'connexion/" class="btn">
+								<span class="icon-user"></span> 
+								Connexion
+						</a>';
+				}) ?>
+	
 			</div>
 			<a href="#" id="hbg">
 				<span></span>

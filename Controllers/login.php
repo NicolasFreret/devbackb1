@@ -1,3 +1,5 @@
 <?php
 
-    $title = "Connexion";
+return[
+    'title' => "Connexion"
+];

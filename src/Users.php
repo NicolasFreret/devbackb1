@@ -27,7 +27,7 @@
 	
 	
 
-	private function logout():void{
+	public function logout():void{
 		if($this->is_user_logged_in()){
 			unset($_SESSION['user']);
 		}

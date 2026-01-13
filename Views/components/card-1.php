@@ -1,6 +1,8 @@
 <article class="card">
 		<div class="level debutant">
-				<span>Intermédiaire</span>
+				<span>
+					<?= array_key_exists("level",$fields) ? $fields['level'] : "intermédiaire" ?>
+				</span>
 		</div>
 	    <figure>
 			<img src="<?= $fields['img'] ?>" alt="">
@@ -12,7 +14,7 @@
 		<p>
 			<?= $fields['content'] ?>
 		</p>
-		<a href="#" class="btn blue">
+		<a href="<?= array_key_exists("url",$fields) ? $fields['url'] : "#" ?>" class="btn blue">
 			<span class="icon-code small"></span> Je code
 		</a>
 		</div>

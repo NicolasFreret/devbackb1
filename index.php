@@ -17,6 +17,10 @@
 		case $baseFolder.'/mon-profil/':
 			getPage('profil.php');
 			break;
+			
+		case $baseFolder.'/challenges/':
+			getPage('challenges.php');
+			break;
 
 		case $baseFolder.'/contactez-moi/':
 			getPage('contact.php');
@@ -24,6 +28,10 @@
 
 		case $baseFolder.'/login/post/':
 			getController('login-post.php');
+			break;
+		
+		case $baseFolder.'/logout/':
+			getController('logout.php');
 			break;
 		
 		default:

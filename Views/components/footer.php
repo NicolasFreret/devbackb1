@@ -64,7 +64,7 @@
 	<script async type="module">
 		import * as main from './assets/js/main.js'
 		main.default()
-		main.wordsTyping('#hero h1 span',['progresser',`t'amuser`,'te former','te détendre','te challenger'],80)
+		main.wordsTyping('#hero h1 span',[`c'est de coder`,`c'est de te détendre`,`c'est d'apprendre`,`c'est de te challenger`],80)
 
 
 	</script>

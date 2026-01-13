@@ -33,13 +33,18 @@ function getPage(string $pageName):void{
     getController($pageName, function($p) use ($pageName){
          getComposant('header.php', ['title'=>$p['title']]);
          require 'Views/'.$pageName;
-         getComposant('footer.php', ['title'=>$p['title']]);
+         getComposant('footer.php');
     });
        
 }
 
 
-
+/**
+ * Va chercher un composant et l'affiche
+ * @param [string] $composantName Le nom du composant à aller chercher (ex:header.php)
+ * @param [array] $params paramètres à envoyer au composant
+ * 
+ */
 function getComposant(string $composantName, array $params = []):void{
     $path = getConfig('components_folder');
     if(file_exists($path.$composantName)){
@@ -66,5 +71,13 @@ function redirectTo(?string $url = null ):never{
     $home = homeUrl();
     header('location: '.($url ?  $home.$url : $home) );
     exit;
+}
+
+function ifLoggedThenElse(callable $elemToDisplayIfLogged, ?callable $elemToDisplayIfNotLogged = null):void{
+    if( (new User())->is_user_logged_in() ){
+        $elemToDisplayIfLogged();
+    }else if($elemToDisplayIfNotLogged){
+        $elemToDisplayIfNotLogged();
+    }
 }
 

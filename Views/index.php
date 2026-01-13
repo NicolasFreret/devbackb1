@@ -2,8 +2,8 @@
 		<section id="hero">
 			<div class="container">
 				<h1 class="h1">
-					Tu codes pour <br>
-					<span></span> .
+					La meilleure façon de <br>
+					progresser, <span></span> .
 				</h1>
 				<p class="strong">Notre mission, accompagner les développeurs et développeuses web dans leur <br> progression technique.</p>
 				<p class="strong">Challenges originaux et corrigés pédagogiques pour découvrir de nouveaux concepts et <br> progresser. PHP, javascript et Python.</p>
