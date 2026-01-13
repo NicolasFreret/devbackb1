@@ -27,23 +27,23 @@
 					<form action="">
 						<div class="group">
 							<label for="peudo">Pseudo</label>
-							<input type="text" name="user_nicename" value="<?= $_SESSION['user']['username'] ?>">
+							<input type="text" name="user_nicename">
 						</div>
 						<div class="group">
 							<label for="email">Adresse e-mail</label>
-							<input type="email" name="user_email" value="<?= $_SESSION['user']['email'] ?>">
+							<input type="email" name="user_email">
 						</div>
 						<div class="group">
 							<label for="prénom">Prénom</label>
-							<input type="text" name="user_firstname" value="<?= $_SESSION['user']['name']['firstname'] ?>">
+							<input type="text" name="user_firstname">
 						</div>
 						<div class="group">
 							<label for="nom">Nom</label>
-							<input type="text" name="user_lastname" value="<?= $_SESSION['user']['name']['lastname'] ?>">
+							<input type="text" name="user_lastname">
 						</div>
 						<div class="group">
 							<label for="peudo">Je vis dans la belle ville de</label>
-							<input type="text" name="_town" value="<?= $_SESSION['user']['address']['city'] ?>">
+							<input type="text" name="_town">
 						</div>
 						<div class="group"></div>
 						<div class="group">
