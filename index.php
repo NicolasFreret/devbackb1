@@ -45,8 +45,12 @@
 			getController('logout.php');
 			break;
 		
+		case $baseFolder.'/update/':
+			getController('update-user.php');
+			break;
+		
 		default:
 			header("HTTP/2.0 404 Not Found");
-			echo '404';
+			getPage('404.php');
 			break;
 	}

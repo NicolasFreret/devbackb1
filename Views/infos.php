@@ -3,47 +3,29 @@
 		<div class="triangle"></div>
 		<section id="quests">
 			<div class="container">
-				<aside class="profil">
-					<div class="photo__name">
-						<figure>
-							<img src="https://tainix.fr/img/user_default_profile_pic.svg?1722934231" alt="">
-						</figure>
-						<div class="name">
-							<h2 class="h3">
-								NicolasF
-							</h2>
-							<p>151 xp</p>
-						</div>
-					</div>
-					<nav>
-						<a href="#"><span class="icon-success small"></span> Succès</a>
-						<a href="#"><span class="icon-code small black"></span> Challenges</a>
-						<a href="#"><span class="icon-group"></span> Communauté</a>
-						<a href="<?= homeUrl() ?>mes-informations/"><span class="icon-user black"></span> Mes informations</a>
-					</nav>
-				</aside>
+				<?= getComposant('sidebar.php') ?>
 				<div class="form">
 					<h1 class="h2">Editer mes informations</h1>
-					<form action="">
+					<form action="<?= homeUrl() ?>update/" method="POST">
 						<div class="group">
 							<label for="peudo">Pseudo</label>
-							<input type="text" name="user_nicename">
+							<input type="text" name="username" value="<?= $_SESSION['user']['username'] ?>">
 						</div>
 						<div class="group">
 							<label for="email">Adresse e-mail</label>
-							<input type="email" name="user_email">
+							<input type="email" name="email" value="<?= $_SESSION['user']['email'] ?>">
 						</div>
 						<div class="group">
 							<label for="prénom">Prénom</label>
-							<input type="text" name="user_firstname">
+							<input type="text" name="firstname" value="<?= $_SESSION['user']['name']['firstname'] ?>">
 						</div>
 						<div class="group">
 							<label for="nom">Nom</label>
-							<input type="text" name="user_lastname">
+							<input type="text" name="lastname" value="<?= $_SESSION['user']['name']['lastname'] ?>">
 						</div>
 						<div class="group">
 							<label for="peudo">Je vis dans la belle ville de</label>
-							<input type="text" name="_town">
+							<input type="text" name="city" value="<?= $_SESSION['user']['address']['city'] ?>">
 						</div>
 						<div class="group"></div>
 						<div class="group">
@@ -71,6 +53,7 @@
 								<option value="dev">Développeur.euse</option>
 							</select>
 						</div>
+						<button>Mettre à jour</button>
 					</form>
 				</div>
 			</div>

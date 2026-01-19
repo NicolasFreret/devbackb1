@@ -105,3 +105,31 @@ function sanitize_output($buffer) {
 }
 
 ob_start("sanitize_output");
+
+
+
+
+function cache(string $url, string $cacheName, ?bool $save = true):mixed{
+
+    if(file_exists('Models/'.$cacheName.'.json')){
+
+        return json_decode(
+            file_get_contents('Models/'.$cacheName.'.json'),
+            true
+        );
+
+    }
+
+        $res = json_decode(
+            file_get_contents($url),
+            true
+        );
+
+        if($save){
+            $bdd = fopen('Models/'.$cacheName.'.json', "w");
+            fwrite($bdd, json_encode($res));
+            fclose($bdd);
+        }
+
+        return $res;
+}

@@ -28,64 +28,7 @@
 			</div>
 			<div class="container">
 				<div class="grid col-3">
-					<article class="card">
-						<div class="level intermediaire">
-							<span>Intermédiaire</span>
-						</div>
-						<figure>
-							<img src="https://wp.tainix.fr/wp-content/uploads/2024/06/REQUIN_TRIATHLON_TAINIX-scaled.jpg" alt="">
-						</figure>
-						<div class="content">
-							<h1 class="h3 line-clamp clamp-2">
-								Un requin pendant le triathlon
-							</h1>
-							<p>
-								Des athlètes dans un fleuve pour épreuve sportive, et un requin qui a très faim...
-							</p>
-							<a href="#" class="btn blue">
-								<span class="icon-code small"></span> Je code
-							</a>
-						</div>
-					</article>
-					<article class="card">
-						<div class="level debutant">
-							<span>Débutant</span>
-						</div>
-						<figure>
-							<img src="https://wp.tainix.fr/wp-content/uploads/2024/07/barbara-kosulin-kEphzmaPWfw-unsplash-scaled.jpg" alt="">
-						</figure>
-						<div class="content">
-							<h1 class="h3">
-								L’échelle de Scoville
-							</h1>
-							<p>
-								Des athlètes dans un fleuve pour épreuve sportive, et un requin qui a très faim...
-							</p>
-							<a href="#" class="btn blue">
-								<span class="icon-code small"></span> Je code
-							</a>
-						</div>
-
-					</article>
-					<article class="card">
-						<div class="level avance">
-							<span>Avancé</span>
-						</div>
-						<figure>
-							<img src="https://wp.tainix.fr/wp-content/uploads/2024/06/REQUIN_TRIATHLON_TAINIX-scaled.jpg" alt="">
-						</figure>
-						<div class="content">
-							<h1 class="h3 line-clamp clamp-2">
-								Un requin pendant le triathlon
-							</h1>
-							<p class="line-clamp clamp-3">
-								Des athlètes dans un fleuve pour épreuve sportive, et un requin qui a très faim ...
-							</p>
-							<a href="#" class="btn blue">
-								<span class="icon-code small"></span> Je code
-							</a>
-						</div>
-					</article>
+					<?= $p['related'] ?>
 				</div>
 			</div>	
 		</section>	

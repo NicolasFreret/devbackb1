@@ -3,25 +3,7 @@
 		<div class="triangle"></div>
 		<section id="quests">
 			<div class="container">
-				<div class="profil">
-					<div class="photo__name">
-						<figure>
-							<img src="https://tainix.fr/img/user_default_profile_pic.svg?1722934231" alt="">
-						</figure>
-						<div class="name">
-							<h2 class="h3">
-								NicolasF
-							</h2>
-							<p>151 xp</p>
-						</div>
-					</div>
-					<nav>
-						<a href="#"><span class="icon-success small"></span> Succès</a>
-						<a href="#"><span class="icon-code small black"></span> Challenges</a>
-						<a href="#"><span class="icon-group"></span> Communauté</a>
-						<a href="<?= homeUrl() ?>mes-informations/"><span class="icon-user black"></span> Mes informations</a>
-					</nav>
-				</div>
+				<?= getComposant('sidebar.php') ?>
 				<div class="quests">
 					<h1 class="h2">Hello jeune padawan</h1>
 					<div class="sub">

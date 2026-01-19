@@ -1,8 +1,22 @@
 <article class="card">
 		<div class="level debutant">
-				<span>
-					<?= array_key_exists("level",$fields) ? $fields['level'] : "intermédiaire" ?>
-				</span>
+				
+					<?php
+					 if(array_key_exists("level",$fields)){
+
+					 	foreach ($fields['level'] as $value) {
+							echo "
+								<a href=".homeUrl()."challenges/?filter=".$value.">
+									<span>".$value."</span> 
+								</a>
+								";
+						}
+
+					 }else{
+						echo "Intermédiaire";
+					 }
+					
+					?>
 		</div>
 	    <figure>
 			<img loading="lazy" src="<?= $fields['img'] ?>" alt="">
