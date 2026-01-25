@@ -28,8 +28,13 @@
            );
      }
 
-     function create(){
+     function create(string $table, array $datas):int{
+          $pdo = bddConnect();
+          $sql = "INSERT INTO ".$table." (".join(",",array_keys($datas)).") VALUES (".rtrim( str_repeat('?,', count($datas)), ',' ).")";
+         
+          $pdo->prepare($sql)->execute(array_values($datas));
 
+          return $pdo->lastInsertId();
      }
 
      function read(string $table, array $_options=[]):array{
@@ -43,10 +48,17 @@
         
      }
 
-     function update(){
+     function update(string $table, string $keys, array $values, string $conditions = "1 == 1"){
+
+          $pdo = bddConnect();
+          $sql = "UPDATE ".$table." SET ".$keys." WHERE ".$conditions;
+          $pdo->prepare($sql)->execute($values);
         
      }
 
-     function delete(){
-        
+    
+
+     function delete(string $table,string $keys, array $values){
+        $bdd = bddConnect();
+        $bdd->prepare("DELETE FROM ".$table." WHERE ".$keys)->execute($values);
      }

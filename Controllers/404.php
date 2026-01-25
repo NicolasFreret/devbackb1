@@ -1,9 +1,17 @@
 <?php
 
- $users = read('villes_france_free',
+
+create('client', [
+    "nom" => "Beerus",
+    "prenom" => "Sama",
+    "email" => "manger@gmail.com",
+    "password" => "loveZeno",
+    "ville" => "capsule corp."
+]);
+
+ $users = read('client',
         [
-            'fields'=>'ville_nom, ville_departement',
-            'conditions' => 'INNER JOIN departement ON ville_departement = departement_code'
+            'fields'=>'prenom, nom'
         ]
  );
 

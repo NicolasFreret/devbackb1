@@ -62,9 +62,9 @@
 		</div>
 	</footer>	
 	<script async type="module">
-		import * as main from './assets/js/main.js'
-		main.default()
-		main.wordsTyping('#hero h1 span',[`c'est de coder`,`c'est de te détendre`,`c'est d'apprendre`,`c'est de te challenger`],80)
+		import * as main from '<?= homeUrl() ?>assets/js/main.js';
+		main.default();
+		main.wordsTyping('#hero h1 span',[`c'est de coder`,`c'est de te détendre`,`c'est d'apprendre`,`c'est de te challenger`],80);
 
 
 	</script>
